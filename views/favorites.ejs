@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/styles.css" />
+ 
+  <title>Favorites</title>
+</head>
+<body>
+  <%- include("partials/header") %>
+  <div class="container">
+    <h1>Your Favorite Cities</h1>
+    <% if (weatherData.length > 0) { %>
+      <% weatherData.forEach((weather) => { %>
+        <div class="city-weather">
+          <h2><%= weather.city %></h2>
+          <p>Temperature: <%= weather.temperature %>°C</p>
+          <p>Condition: <%= weather.condition %></p>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <p>No favorite cities yet. Add some from the homepage!</p>
+    <% } %>
+  </div>
+  <%- include("partials/footer") %>
+</body>
+</html>
