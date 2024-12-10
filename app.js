@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 
-const API_KEY = "38235913e0c6ca68018951c799cf0b16";
+const API_KEY = process.env.API_KEY;
 
 let favoriteCities = [];
 
