@@ -7,7 +7,7 @@ const axios = require("axios");
 // Weather Route
 router.get("/", async (req, res) => {
   const city = req.query.city || "Hyderabad";
-  const apiKey = process.env.API_KEY; 
+  const apiKey =13df8dcd69f58e21940196c94e1b4cb5; 
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   try {
